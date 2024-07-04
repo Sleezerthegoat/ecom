@@ -1,0 +1,138 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-logo img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  
+  .nav-dropdown {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .nav-menu li {
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    color: #f90;
+  }
+  
+  .nav-menu li hr {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    border: none;
+    height: 2px;
+    background: #f90;
+  }
+  
+  .nav-login-cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .nav-login-cart button {
+    background-color: #f90;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-login-cart button:hover {
+    background-color: #c60;
+  }
+  
+  .nav-login-cart img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .nav-cart-count {
+    background-color: #fff; /* Changed background to white */
+    color: #f90; /* Changed text color to orange */
+    border-radius: 50%;
+    padding: 3px 8px; /* Reduced padding */
+    margin-left: -12px; /* Adjusted margin */
+    font-size: 0.7rem; /* Reduced font size */
+  }
+  
+  .nav-cart-count::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-dropdown {
+      display: block;
+    }
+  
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      flex-direction: column;
+    }
+  
+    .nav-menu-visible {
+      max-height: 500px;
+    }
+  
+    .nav-menu li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
